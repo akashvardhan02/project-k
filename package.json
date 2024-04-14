@@ -1,0 +1,35 @@
+{
+  "name": "temporal-workspace",
+  "private": true,
+  "author": {
+    "name": "Adam Shaw",
+    "email": "arshaw@users.noreply.github.com",
+    "url": "http://arshaw.com/"
+  },
+  "contributors": [
+    {
+      "name": "Ishaan Bharal",
+      "email": "ishbharal@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "copyright": "2024 Adam Shaw",
+  "type": "module",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "lefthook install",
+    "ci": "pnpm run clean && pnpm run lint && pnpm run build && pnpm run test",
+    "lint": "pnpm -r run lint",
+    "build": "pnpm -r run build",
+    "test": "pnpm -r --stream --filter=!@js-temporal/temporal-test262-runner run test",
+    "clean": "pnpm -r run clean"
+  },
+  "devDependencies": {
+    "lefthook": "^1.6.1"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "rollup-plugin-sourcemaps@0.6.3": "patches/rollup-plugin-sourcemaps@0.6.3.patch"
+    }
+  }
+}

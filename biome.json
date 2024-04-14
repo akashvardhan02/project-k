@@ -1,0 +1,54 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.5.1/schema.json",
+  "files": {
+    "ignore": [
+      "**/node_modules/**",
+      "**/dist/**",
+      "**/export-size-output/**",
+      "test262",
+      "packages/export-size",
+      "packages/temporal-spec",
+      "packages/temporal-test262-runner"
+    ]
+  },
+  "linter": {
+    "rules": {
+      "complexity": {
+        "noBannedTypes": "off",
+        "useLiteralKeys": "off",
+        "useOptionalChain": "off"
+      },
+      "correctness": {
+        "noUnusedVariables": "error"
+      },
+      "performance": {
+        "noDelete": "off"
+      },
+      "suspicious": {
+        "noAssignInExpressions": "off",
+        "noConstEnum": "off",
+        "noExplicitAny": "off",
+        "noGlobalIsNan": "off",
+        "noMisleadingInstantiator": "off",
+        "noShadowRestrictedNames": "off",
+        "noUnsafeDeclarationMerging": "off"
+      },
+      "style": {
+        "noCommaOperator": "off",
+        "noNonNullAssertion": "off",
+        "noParameterAssign": "off",
+        "useTemplate": "off"
+      }
+    }
+  },
+  "formatter": {
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "quoteProperties": "preserve",
+      "semicolons": "asNeeded"
+    }
+  }
+}

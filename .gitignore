@@ -1,0 +1,7 @@
+node_modules
+
+/packages/*/dist/*
+/!packages/*/dist/.npmignore
+/packages/*/export-size-output
+
+/examples/*/dist
